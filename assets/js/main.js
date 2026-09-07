@@ -251,11 +251,26 @@
     var dots = root.querySelectorAll(".hero-dot");
     var prev = document.getElementById("hero-prev");
     var next = document.getElementById("hero-next");
+    var heroInner = document.getElementById("hero-inner");
+    var heroHeadline = document.getElementById("hero-headline");
+    var heroSub = document.getElementById("hero-sub");
+    var heroCta = document.getElementById("hero-cta");
+    var heroCtaLabel = document.getElementById("hero-cta-label");
+    var heroTagline = document.getElementById("hero-tagline");
     if (slides.length < 2) return;
 
     var current = 0;
     var timer = null;
     var INTERVAL = 6000;
+
+    function applyContent(slide) {
+      if (!slide) return;
+      if (heroHeadline) heroHeadline.textContent = slide.getAttribute("data-headline") || "";
+      if (heroSub) heroSub.textContent = slide.getAttribute("data-sub") || "";
+      if (heroCtaLabel) heroCtaLabel.textContent = slide.getAttribute("data-cta") || "";
+      if (heroCta) heroCta.setAttribute("href", slide.getAttribute("data-cta-href") || "#quote-form");
+      if (heroTagline) heroTagline.textContent = slide.getAttribute("data-tagline") || "";
+    }
 
     function go(index) {
       current = (index + slides.length) % slides.length;
@@ -265,6 +280,15 @@
       dots.forEach(function (d, i) {
         d.classList.toggle("is-active", i === current);
       });
+      if (heroInner) {
+        heroInner.classList.add("is-fading");
+        setTimeout(function () {
+          applyContent(slides[current]);
+          heroInner.classList.remove("is-fading");
+        }, 220);
+      } else {
+        applyContent(slides[current]);
+      }
     }
     function nextSlide() {
       go(current + 1);
