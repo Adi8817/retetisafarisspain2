@@ -22,9 +22,9 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <!-- ============================= -->
-    <!-- Top Bar -->
-    <!-- ============================= -->
+    
+
+
     <!-- ============================= -->
     <!-- Header / Navigation -->
     <!-- ============================= -->
@@ -50,6 +50,10 @@
           <a href="#destinations" data-i18n="nav.destinations">Destinations</a>
           <a href="#reviews" data-i18n="nav.reviews">Reviews</a>
           <a href="#faq" data-i18n="nav.faq">FAQ</a>
+          <div class="lang-switcher" id="lang-switcher-desktop">
+            <button type="button" class="lang-btn active" data-lang="en">EN</button>
+            <button type="button" class="lang-btn" data-lang="es">ES</button>
+          </div>
         </nav>
         <div class="header-right">
           <a href="#quote-form" class="btn btn-gold nav-cta" data-i18n="nav.cta"
@@ -81,6 +85,12 @@
       >
       <a href="#reviews" class="mobile-link" data-i18n="nav.reviews">Reviews</a>
       <a href="#faq" class="mobile-link" data-i18n="nav.faq">FAQ</a>
+      <div class="mobile-lang-row">
+        <div class="lang-switcher" id="lang-switcher-mobile">
+          <button type="button" class="lang-btn active" data-lang="en">EN</button>
+          <button type="button" class="lang-btn" data-lang="es">ES</button>
+        </div>
+      </div>
       <a href="tel:+254700302965" class="mobile-call">
         <i class="fas fa-phone"></i> +254 700 302 965
       </a>
@@ -106,6 +116,10 @@
           data-cta="Plan My Safari"
           data-cta-href="#quote-form"
           data-tagline="Local experts · Private itineraries · Kenya &amp; Tanzania"
+          data-headline-es="Tu Safari en Kenia y Tanzania, Diseñado a Tu Medida"
+          data-sub-es="Descubre la Maasai Mara, el Serengeti y el Ngorongoro con un safari privado adaptado a tus fechas, intereses, ritmo y presupuesto."
+          data-cta-es="Planificar Mi Safari"
+          data-tagline-es="Expertos locales · Itinerarios privados · Kenia y Tanzania"
         ></div>
         <div
           class="hero-slide"
@@ -115,6 +129,10 @@
           data-cta="Plan My Honeymoon"
           data-cta-href="#quote-form"
           data-tagline="Private safari · Luxury stays · Zanzibar escape"
+          data-headline-es="Tu Luna de Miel Africana Comienza Aquí"
+          data-sub-es="Desde la Maasai Mara y el Serengeti hasta las playas de Zanzíbar, disfruta de un viaje privado por Kenia y Tanzania diseñado para vivir momentos inolvidables en pareja."
+          data-cta-es="Planificar Mi Luna de Miel"
+          data-tagline-es="Safari privado · Alojamientos de lujo · Escapada a Zanzíbar"
         ></div>
         <div
           class="hero-slide"
@@ -124,6 +142,10 @@
           data-cta="Plan My Migration Safari"
           data-cta-href="#quote-form"
           data-tagline="Maasai Mara · Serengeti · Big Five · Seasonal"
+          data-headline-es="Vive la Gran Migración de África"
+          data-sub-es="Sigue el legendario viaje de la fauna salvaje por Kenia y Tanzania, con guías locales expertos y un safari planificado en la mejor época para vivirlo."
+          data-cta-es="Planificar Mi Safari de la Migración"
+          data-tagline-es="Maasai Mara · Serengeti · Los Cinco Grandes · Estacional"
         ></div>
       </div>
       <div class="hero-overlay"></div>
@@ -187,7 +209,7 @@
     <!-- Trust Strip -->
     <!-- ============================= -->
     <div class="trust-strip">
-      <h2 class="sr-only">Why travellers from Spain choose Reteti</h2>
+      <h2 class="sr-only" data-i18n="trust.srtitle">Why travellers from Spain choose Reteti</h2>
       <div class="trust-strip-inner">
         <div class="trust-item">
           <i class="fas fa-shield-halved"></i>
@@ -219,6 +241,7 @@
     <!-- ============================= -->
     <!-- About + Lead Form Section (NEW) -->
     <!-- ============================= -->
+
     <section class="about-lead" id="quote-form">
       <div class="about-lead-inner">
         <div class="about-col">
@@ -268,7 +291,7 @@
           ></a> -->
           <div class="about-image">
             <img
-              src="assets/images/gallery7.png"
+              src="assets/images/gallery5.png"
               alt="Reteti safari guide with travellers in the Masai Mara"
               loading="lazy"
             />
@@ -356,9 +379,9 @@
                   <option value="" data-i18n="fo.dest">
                     Choose destination...
                   </option>
-                  <option value="Kenya">Kenya</option>
-                  <option value="Tanzania">Tanzania</option>
-                  <option value="Kenya &amp; Tanzania">
+                  <option value="Kenya" data-i18n="dest.opt.kenya">Kenya</option>
+                  <option value="Tanzania" data-i18n="dest.opt.tanzania">Tanzania</option>
+                  <option value="Kenya &amp; Tanzania" data-i18n="dest.opt.both">
                     Kenya &amp; Tanzania
                   </option>
                 </select>
@@ -367,16 +390,16 @@
                 <label for="ft-month" data-i18n="f.month">Travel Date</label>
                 <select id="ft-month" name="travel-month">
                   <option value="" data-i18n="fo.month">Not decided yet</option>
-                  <option value="September">September</option>
-                  <option value="October">October</option>
-                  <option value="November">November</option>
-                  <option value="December">December</option>
-                  <option value="January 2027">January 2027</option>
-                  <option value="February 2027">February 2027</option>
-                  <option value="March 2027">March 2027</option>
-                  <option value="April 2027">April 2027</option>
-                  <option value="May 2027">May 2027</option>
-                  <option value="June 2027">June 2027</option>
+                  <option value="September" data-i18n="month.sep">September</option>
+                  <option value="October" data-i18n="month.oct">October</option>
+                  <option value="November" data-i18n="month.nov">November</option>
+                  <option value="December" data-i18n="month.dec">December</option>
+                  <option value="January 2027" data-i18n="month.jan27">January 2027</option>
+                  <option value="February 2027" data-i18n="month.feb27">February 2027</option>
+                  <option value="March 2027" data-i18n="month.mar27">March 2027</option>
+                  <option value="April 2027" data-i18n="month.apr27">April 2027</option>
+                  <option value="May 2027" data-i18n="month.may27">May 2027</option>
+                  <option value="June 2027" data-i18n="month.jun27">June 2027</option>
                 </select>
               </div>
               <!-- No. of Travellers — full width -->
@@ -506,170 +529,9 @@
       </div>
     </section>
 
-    <!-- ============================= -->
-    <!-- Featured Tour Section -->
-    <!-- ============================= -->
-    <!-- <section class="section" id="featured">
-      <div class="container">
-        <div class="text-center">
-          <div class="eyebrow" data-i18n="featured.eyebrow">
-            Most Popular Package
-          </div>
-          <h2 class="section-title" data-i18n="featured.title">
-            Kenya &amp; Tanzania Safari – 10 Days
-          </h2>
-          <p class="section-lead" data-i18n="featured.lead">
-            The classic East Africa circuit: Masai Mara, Lake Nakuru, Serengeti
-            and the Ngorongoro Crater. A once-in-a-lifetime adventure.
-          </p>
-        </div>
-        <article class="featured-card" id="featured-card">
-          <div class="featured-gallery">
-            <div class="featured-main">
-              <img
-                id="featured-main-img"
-                src="assets/images/img1.jpg"
-                alt="Elephants in the Masai Mara"
-                loading="lazy"
-              />
-              <span class="featured-main-badge"
-                ><i class="fas fa-star"></i> Most Popular Package</span
-              >
-              <span class="featured-rating-badge"
-                ><i class="fas fa-star"></i> 4.9/5
-                <small>· Spanish traveller reviews</small></span
-              >
-            </div>
-            <div class="featured-thumbs" id="featured-thumbs">
-              <button
-                class="featured-thumb is-active"
-                data-src="assets/images/img2.jpg"
-                aria-label="View elephants"
-              >
-                <img
-                  src="assets/images/img2.jpg"
-                  alt="Elephants Masai Mara"
-                  loading="lazy"
-                />
-              </button>
-              <button
-                class="featured-thumb"
-                data-src="assets/images/img3.jpg"
-                aria-label="View lion"
-              >
-                <img
-                  src="assets/images/img3.jpg"
-                  alt="Lion African savannah"
-                  loading="lazy"
-                />
-              </button>
-              <button
-                class="featured-thumb"
-                data-src="assets/images/img4.jpg"
-                aria-label="View migration"
-              >
-                <img
-                  src="assets/images/img4.jpg"
-                  alt="Great Migration Serengeti"
-                  loading="lazy"
-                />
-              </button>
-              <button
-                class="featured-thumb"
-                data-src="assets/images/img5.jpg"
-                aria-label="View Ngorongoro"
-              >
-                <img
-                  src="assets/images/img5.jpg"
-                  alt="Ngorongoro Crater"
-                  loading="lazy"
-                />
-              </button>
-            </div>
-          </div>
-          <div class="featured-body">
-            <span class="featured-badge"
-              ><i class="fas fa-star"></i> Most Popular Package</span
-            >
-            <h2 data-i18n="featured.h2">
-              Kenya &amp; Tanzania – The Complete Adventure
-            </h2>
-            <p data-i18n="featured.desc">
-              Journey through two of East Africa's most spectacular countries in
-              an epic 10-day safari. From the golden plains of Masai Mara to the
-              majestic Ngorongoro Crater, every day brings a new unforgettable
-              experience.
-            </p>
-            <div class="featured-highlights-row">
-              <div class="fh-item">
-                <div class="fh-icon"><i class="fas fa-paw"></i></div>
-                <span data-i18n="fh.1">Big Five wildlife</span>
-              </div>
-              <div class="fh-item">
-                <div class="fh-icon"><i class="fas fa-hippo"></i></div>
-                <span data-i18n="fh.2">Great Migration</span>
-              </div>
-              <div class="fh-item">
-                <div class="fh-icon"><i class="fas fa-mountain"></i></div>
-                <span data-i18n="fh.3">Ngorongoro Crater</span>
-              </div>
-              <div class="fh-item">
-                <div class="fh-icon"><i class="fas fa-hotel"></i></div>
-                <span data-i18n="fh.4">Luxury lodges &amp; camps</span>
-              </div>
-            </div>
-            <div class="featured-trust-panel">
-              <span class="featured-trust-kicker">Why Travel With Reteti</span>
-              <div class="featured-trust-grid">
-                <div class="ft-item">
-                  <div class="ft-icon">
-                    <i class="fas fa-shield-halved"></i>
-                  </div>
-                  <span>100% Locally Owned</span>
-                </div>
-                <div class="ft-item">
-                  <div class="ft-icon">
-                    <i class="fas fa-hand-holding-dollar"></i>
-                  </div>
-                  <span>No Middlemen Pricing</span>
-                </div>
-                <div class="ft-item">
-                  <div class="ft-icon"><i class="fas fa-people-group"></i></div>
-                  <span>Small Groups, Max 8</span>
-                </div>
-                <div class="ft-item">
-                  <div class="ft-icon"><i class="fas fa-language"></i></div>
-                  <span>Spanish-Speaking Guides</span>
-                </div>
-              </div>
-            </div>
-            <div class="featured-footer">
-              <div class="featured-price">
-                <span class="fp-label" data-i18n="featured.from">From</span>
-                <span class="fp-value"
-                  >€3.290
-                  <small data-i18n="featured.pp">per person</small></span
-                >
-                <span class="fp-includes"
-                  >Includes park fees, full board, 4&times;4 transport &amp;
-                  expert guide</span
-                >
-              </div>
-              <div class="featured-cta-wrap">
-                <a href="#quote-form" class="featured-cta">
-                  <span data-i18n="btn.freequote">Get Free Quote</span>
-                  <i class="fas fa-arrow-right"></i>
-                </a>
-                <span class="featured-cta-note"
-                  ><i class="fas fa-circle-check"></i> No obligation &middot;
-                  reply within 24h</span
-                >
-              </div>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section> -->
+
+   
+  
 
     <!-- ============================= -->
     <!-- Why Choose Us Section -->
@@ -678,13 +540,13 @@
       <div class="whyk-container">
         <div class="whyk-top">
           <div class="whyk-intro">
-            <span class="eyebrow"
+            <span class="eyebrow" data-i18n="why.eyebrow"
               >WHY TRAVELLERS FROM SPAIN CHOOSE EAST AFRICA</span
             >
-            <h2 class="whyk-title">
+            <h2 class="whyk-title" data-i18n-html="why.title">
               Why <span class="highlight"> Kenya &amp; Tanzania</span>?
             </h2>
-            <p class="whyk-lead">
+            <p class="whyk-lead" data-i18n="why.lead">
               <!-- Kenya and Tanzania offer an extraordinary combination of
               wildlife, landscapes, culture and adventure — all in one
               unforgettable journey. -->
@@ -712,10 +574,10 @@
           <div class="whyk-card">
             <div class="whyk-card-head">
               <span class="whyk-icon"><i class="fas fa-comment-dots"></i></span>
-              <h3>See Africa's Big Five in the Wild</h3>
+              <h3 data-i18n="why.c1.t">See Africa's Big Five in the Wild</h3>
             </div>
             <span class="whyk-card-line"></span>
-            <p>
+            <p data-i18n="why.c1.d">
               Experience lions, elephants, leopards, rhinos and buffalo in their
               natural habitat — not behind fences or in a zoo.
             </p>
@@ -723,10 +585,10 @@
           <div class="whyk-card">
             <div class="whyk-card-head">
               <span class="whyk-icon"><i class="fas fa-tag"></i></span>
-              <h3>Witness the Great Migration</h3>
+              <h3 data-i18n="why.c2.t">Witness the Great Migration</h3>
             </div>
             <span class="whyk-card-line"></span>
-            <p>
+            <p data-i18n="why.c2.d">
               Watch millions of wildebeest and other animals move across the
               Serengeti and Maasai Mara in one of nature's greatest spectacles.
             </p>
@@ -734,10 +596,10 @@
           <div class="whyk-card">
             <div class="whyk-card-head">
               <span class="whyk-icon"><i class="fas fa-binoculars"></i></span>
-              <h3>Safari + Zanzibar in One Journey</h3>
+              <h3 data-i18n="why.c3.t">Safari + Zanzibar in One Journey</h3>
             </div>
             <span class="whyk-card-line"></span>
-            <p>
+            <p data-i18n="why.c3.d">
               Combine unforgettable wildlife adventures with white-sand beaches,
               turquoise waters and the unique culture of Zanzibar.
             </p>
@@ -747,10 +609,10 @@
               <span class="whyk-icon"
                 ><i class="fas fa-shield-halved"></i
               ></span>
-              <h3>A Perfect Escape for Couples</h3>
+              <h3 data-i18n="why.c4.t">A Perfect Escape for Couples</h3>
             </div>
             <span class="whyk-card-line"></span>
-            <p>
+            <p data-i18n="why.c4.d">
               From private game drives to romantic lodges and unforgettable
               sunsets, create a safari made for two.
             </p>
@@ -758,10 +620,10 @@
           <div class="whyk-card">
             <div class="whyk-card-head">
               <span class="whyk-icon"><i class="fas fa-sun"></i></span>
-              <h3>An Adventure the Whole Family Can Share</h3>
+              <h3 data-i18n="why.c5.t">An Adventure the Whole Family Can Share</h3>
             </div>
             <span class="whyk-card-line"></span>
-            <p>
+            <p data-i18n="why.c5.d">
               Introduce your family to Africa through wildlife, nature and
               unforgettable experiences designed around your children's ages and
               your travel pace.
@@ -770,10 +632,10 @@
           <div class="whyk-card">
             <div class="whyk-card-head">
               <span class="whyk-icon"><i class="fas fa-people-group"></i></span>
-              <h3>Africa Made for Incredible Photography</h3>
+              <h3 data-i18n="why.c6.t">Africa Made for Incredible Photography</h3>
             </div>
             <span class="whyk-card-line"></span>
-            <p>
+            <p data-i18n="why.c6.d">
               Capture elephants beneath Kilimanjaro, lions across the savannah
               and unforgettable wildlife moments in the Serengeti and Maasai
               Mara.
@@ -782,10 +644,10 @@
           <div class="whyk-card">
             <div class="whyk-card-head">
               <span class="whyk-icon"><i class="fas fa-heart"></i></span>
-              <h3>Two Countries. One Extraordinary Safari.</h3>
+              <h3 data-i18n="why.c7.t">Two Countries. One Extraordinary Safari.</h3>
             </div>
             <span class="whyk-card-line"></span>
-            <p>
+            <p data-i18n="why.c7.d">
               Explore the best of Kenya and Tanzania in one carefully planned
               journey — from the Maasai Mara and Amboseli to the Serengeti and
               Ngorongoro.
@@ -794,10 +656,10 @@
           <div class="whyk-card">
             <div class="whyk-card-head">
               <span class="whyk-icon"><i class="fas fa-camera"></i></span>
-              <h3>Plan From Spain. Travel With Confidence.</h3>
+              <h3 data-i18n="why.c8.t">Plan From Spain. Travel With Confidence.</h3>
             </div>
             <span class="whyk-card-line"></span>
-            <p>
+            <p data-i18n="why.c8.d">
               Work directly with our local safari team to build your itinerary,
               understand your options and prepare for your journey to East
               Africa.
@@ -806,6 +668,8 @@
         </div>
       </div>
     </section>
+
+
 
     <!-- ============================= -->
     <!-- Packages Section -->
@@ -837,19 +701,19 @@
                 alt="Lion sighting, Serengeti"
                 loading="lazy"
               />
-              <span class="pkg-type">BEST SELLER</span>
+              <span class="pkg-type" data-i18n="pkg1.type">BEST SELLER</span>
               <div class="pkg-badges">
                 <span class="pkg-badge"
-                  ><i class="fas fa-sun"></i> 10 Days</span
+                  ><i class="fas fa-sun"></i> <span data-i18n="pkg1.days">10 Days</span></span
                 >
                 <span class="pkg-badge"
-                  ><i class="fas fa-moon"></i> 9 Nights</span
+                  ><i class="fas fa-moon"></i> <span data-i18n="pkg1.nights">9 Nights</span></span
                 >
               </div>
             </div>
             <div class="pkg-body">
-              <h3>The Essential East Africa Safari</h3>
-              <p>
+              <h3 data-i18n="pkg1.title">The Essential East Africa Safari</h3>
+              <p data-i18n="pkg1.desc">
                 Two countries. The Big Five. One unforgettable African
                 adventure. Discover the very best of Kenya and Tanzania in one
                 perfectly balanced safari. From the legendary Maasai Mara to the
@@ -858,17 +722,17 @@
                 Africa extraordinary.
               </p>
               <div class="pkg-chips">
-                <span class="pkg-chip">Maasai Mara</span>
-                <span class="pkg-chip">Serengeti</span>
-                <span class="pkg-chip">Ngorongoro Crater</span>
+                <span class="pkg-chip" data-i18n="pkg1.chip1">Maasai Mara</span>
+                <span class="pkg-chip" data-i18n="pkg1.chip2">Serengeti</span>
+                <span class="pkg-chip" data-i18n="pkg1.chip3">Ngorongoro Crater</span>
               </div>
               <div class="pkg-footer">
                 <div class="pkg-price">
-                  <span>From / Person</span>
+                  <span data-i18n="pkg.priceLabel">From / Person</span>
                   <strong>€2.990</strong>
                 </div>
                 <a href="#quote-form" class="pkg-cta"
-                  >Customise My Safari <i class="fas fa-arrow-right"></i
+                  ><span data-i18n="pkg1.cta">Customise My Safari</span> <i class="fas fa-arrow-right"></i
                 ></a>
               </div>
             </div>
@@ -881,19 +745,19 @@
                 alt="Honeymoon couple at camp, Tanzania"
                 loading="lazy"
               />
-              <span class="pkg-type">HONEYMOON FAVOURITE</span>
+              <span class="pkg-type" data-i18n="pkg2.type">HONEYMOON FAVOURITE</span>
               <div class="pkg-badges">
                 <span class="pkg-badge"
-                  ><i class="fas fa-sun"></i> 13 Days</span
+                  ><i class="fas fa-sun"></i> <span data-i18n="pkg2.days">13 Days</span></span
                 >
                 <span class="pkg-badge"
-                  ><i class="fas fa-moon"></i> 12 Nights</span
+                  ><i class="fas fa-moon"></i> <span data-i18n="pkg2.nights">12 Nights</span></span
                 >
               </div>
             </div>
             <div class="pkg-body">
-              <h3>Safari &amp; Zanzibar Honeymoon</h3>
-              <p>
+              <h3 data-i18n="pkg2.title">Safari &amp; Zanzibar Honeymoon</h3>
+              <p data-i18n="pkg2.desc">
                 Wild Africa. Private moments. Paradise at the end. Begin your
                 honeymoon surrounded by Africa's incredible wildlife, then slow
                 down on the white-sand beaches of Zanzibar. A romantic journey
@@ -901,17 +765,17 @@
                 Indian Ocean — designed especially for two.
               </p>
               <div class="pkg-chips">
-                <span class="pkg-chip">Private Safari</span>
-                <span class="pkg-chip">Romantic Lodges</span>
-                <span class="pkg-chip">Zanzibar Beach Stay</span>
+                <span class="pkg-chip" data-i18n="pkg2.chip1">Private Safari</span>
+                <span class="pkg-chip" data-i18n="pkg2.chip2">Romantic Lodges</span>
+                <span class="pkg-chip" data-i18n="pkg2.chip3">Zanzibar Beach Stay</span>
               </div>
               <div class="pkg-footer">
                 <div class="pkg-price">
-                  <span>From / Person</span>
+                  <span data-i18n="pkg.priceLabel">From / Person</span>
                   <strong>€4.490</strong>
                 </div>
                 <a href="#quote-form" class="pkg-cta"
-                  >Plan My Honeymoon <i class="fas fa-arrow-right"></i
+                  ><span data-i18n="pkg2.cta">Plan My Honeymoon</span> <i class="fas fa-arrow-right"></i
                 ></a>
               </div>
             </div>
@@ -924,19 +788,19 @@
                 alt="Family on game drive"
                 loading="lazy"
               />
-              <span class="pkg-type">FAMILY FAVOURITE</span>
+              <span class="pkg-type" data-i18n="pkg3.type">FAMILY FAVOURITE</span>
               <div class="pkg-badges">
                 <span class="pkg-badge"
-                  ><i class="fas fa-sun"></i> 10 Days</span
+                  ><i class="fas fa-sun"></i> <span data-i18n="pkg3.days">10 Days</span></span
                 >
                 <span class="pkg-badge"
-                  ><i class="fas fa-moon"></i> 9 Nights</span
+                  ><i class="fas fa-moon"></i> <span data-i18n="pkg3.nights">9 Nights</span></span
                 >
               </div>
             </div>
             <div class="pkg-body">
-              <h3>Kenya &amp; Tanzania Family Adventure</h3>
-              <p>
+              <h3 data-i18n="pkg3.title">Kenya &amp; Tanzania Family Adventure</h3>
+              <p data-i18n="pkg3.desc">
                 An African adventure your family will talk about for years.
                 Introduce your family to Africa through unforgettable wildlife
                 encounters, breathtaking landscapes and experiences designed
@@ -947,17 +811,17 @@
                 configuration.
               </p>
               <div class="pkg-chips">
-                <span class="pkg-chip">Family-Friendly Lodges</span>
-                <span class="pkg-chip">Amboseli Elephants</span>
-                <span class="pkg-chip">Maasai Mara</span>
+                <span class="pkg-chip" data-i18n="pkg3.chip1">Family-Friendly Lodges</span>
+                <span class="pkg-chip" data-i18n="pkg3.chip2">Amboseli Elephants</span>
+                <span class="pkg-chip" data-i18n="pkg3.chip3">Maasai Mara</span>
               </div>
               <div class="pkg-footer">
                 <div class="pkg-price">
-                  <span>From / Adult</span>
+                  <span data-i18n="pkg3.priceLabel">From / Adult</span>
                   <strong>€2.790</strong>
                 </div>
                 <a href="#quote-form" class="pkg-cta"
-                  >Plan My Family Safari <i class="fas fa-arrow-right"></i
+                  ><span data-i18n="pkg3.cta">Plan My Family Safari</span> <i class="fas fa-arrow-right"></i
                 ></a>
               </div>
             </div>
@@ -970,17 +834,17 @@
                 alt="Hot air balloon safari, Great Migration"
                 loading="lazy"
               />
-              <span class="pkg-type">JUL–OCT · SEASONAL</span>
+              <span class="pkg-type" data-i18n="pkg4.type">JUL–OCT · SEASONAL</span>
               <div class="pkg-badges">
-                <span class="pkg-badge"><i class="fas fa-sun"></i> 9 Days</span>
+                <span class="pkg-badge"><i class="fas fa-sun"></i> <span data-i18n="pkg4.days">9 Days</span></span>
                 <span class="pkg-badge"
-                  ><i class="fas fa-moon"></i> 8 Nights</span
+                  ><i class="fas fa-moon"></i> <span data-i18n="pkg4.nights">8 Nights</span></span
                 >
               </div>
             </div>
             <div class="pkg-body">
-              <h3>Great Migration Signature Safari</h3>
-              <p>
+              <h3 data-i18n="pkg4.title">Great Migration Signature Safari</h3>
+              <p data-i18n="pkg4.desc">
                 Witness one of nature's greatest spectacles. Follow the rhythm
                 of one of the world's greatest wildlife spectacles. Explore the
                 Maasai Mara and Serengeti during the migration season, with
@@ -988,17 +852,17 @@
                 parks.
               </p>
               <div class="pkg-chips">
-                <span class="pkg-chip">Great Migration</span>
-                <span class="pkg-chip">Big Cats</span>
-                <span class="pkg-chip">Photography</span>
+                <span class="pkg-chip" data-i18n="pkg4.chip1">Great Migration</span>
+                <span class="pkg-chip" data-i18n="pkg4.chip2">Big Cats</span>
+                <span class="pkg-chip" data-i18n="pkg4.chip3">Photography</span>
               </div>
               <div class="pkg-footer">
                 <div class="pkg-price">
-                  <span>From / Person</span>
+                  <span data-i18n="pkg.priceLabel">From / Person</span>
                   <strong>€3.490</strong>
                 </div>
                 <a href="#quote-form" class="pkg-cta"
-                  >Check Migration Dates <i class="fas fa-arrow-right"></i
+                  ><span data-i18n="pkg4.cta">Check Migration Dates</span> <i class="fas fa-arrow-right"></i
                 ></a>
               </div>
             </div>
@@ -1011,19 +875,19 @@
                 alt="Lodge terrace at sunset, Ngorongoro"
                 loading="lazy"
               />
-              <span class="pkg-type">PRIVATE LUXURY</span>
+              <span class="pkg-type" data-i18n="pkg5.type">PRIVATE LUXURY</span>
               <div class="pkg-badges">
                 <span class="pkg-badge"
-                  ><i class="fas fa-sun"></i> 12 Days</span
+                  ><i class="fas fa-sun"></i> <span data-i18n="pkg5.days">12 Days</span></span
                 >
                 <span class="pkg-badge"
-                  ><i class="fas fa-moon"></i> 11 Nights</span
+                  ><i class="fas fa-moon"></i> <span data-i18n="pkg5.nights">11 Nights</span></span
                 >
               </div>
             </div>
             <div class="pkg-body">
-              <h3>Private Luxury Kenya &amp; Tanzania</h3>
-              <p>
+              <h3 data-i18n="pkg5.title">Private Luxury Kenya &amp; Tanzania</h3>
+              <p data-i18n="pkg5.desc">
                 Africa, at your pace. Without compromise. Experience Kenya and
                 Tanzania at a more exclusive pace, staying in carefully selected
                 luxury lodges and camps while enjoying a completely private
@@ -1031,17 +895,17 @@
                 comfort, exceptional locations and personalised service.
               </p>
               <div class="pkg-chips">
-                <span class="pkg-chip">Premium Lodges &amp; Camps</span>
-                <span class="pkg-chip">Private Game Drives</span>
-                <span class="pkg-chip">Gourmet Dining</span>
+                <span class="pkg-chip" data-i18n="pkg5.chip1">Premium Lodges &amp; Camps</span>
+                <span class="pkg-chip" data-i18n="pkg5.chip2">Private Game Drives</span>
+                <span class="pkg-chip" data-i18n="pkg5.chip3">Gourmet Dining</span>
               </div>
               <div class="pkg-footer">
                 <div class="pkg-price">
-                  <span>From / Person</span>
+                  <span data-i18n="pkg.priceLabel">From / Person</span>
                   <strong>€5.490</strong>
                 </div>
                 <a href="#quote-form" class="pkg-cta"
-                  >Design My Luxury Safari <i class="fas fa-arrow-right"></i
+                  ><span data-i18n="pkg5.cta">Design My Luxury Safari</span> <i class="fas fa-arrow-right"></i
                 ></a>
               </div>
             </div>
@@ -1054,17 +918,17 @@
                 alt="Local guide with travellers, Kenya"
                 loading="lazy"
               />
-              <span class="pkg-type">PRIVATE GROUP</span>
+              <span class="pkg-type" data-i18n="pkg6.type">PRIVATE GROUP</span>
               <div class="pkg-badges">
-                <span class="pkg-badge"><i class="fas fa-sun"></i> 9 Days</span>
+                <span class="pkg-badge"><i class="fas fa-sun"></i> <span data-i18n="pkg6.days">9 Days</span></span>
                 <span class="pkg-badge"
-                  ><i class="fas fa-moon"></i> 8 Nights</span
+                  ><i class="fas fa-moon"></i> <span data-i18n="pkg6.nights">8 Nights</span></span
                 >
               </div>
             </div>
             <div class="pkg-body">
-              <h3>Friends &amp; Family Private Safari</h3>
-              <p>
+              <h3 data-i18n="pkg6.title">Friends &amp; Family Private Safari</h3>
+              <p data-i18n="pkg6.desc">
                 Share Africa with the people who matter most. Bring your
                 favourite people and experience Africa together. A private
                 safari designed for friends, siblings, couples travelling
@@ -1072,17 +936,17 @@
                 your own safari vehicle.
               </p>
               <div class="pkg-chips">
-                <span class="pkg-chip">Private Vehicle</span>
-                <span class="pkg-chip">Flexible Itinerary</span>
-                <span class="pkg-chip">Big Five</span>
+                <span class="pkg-chip" data-i18n="pkg6.chip1">Private Vehicle</span>
+                <span class="pkg-chip" data-i18n="pkg6.chip2">Flexible Itinerary</span>
+                <span class="pkg-chip" data-i18n="pkg6.chip3">Big Five</span>
               </div>
               <div class="pkg-footer">
                 <div class="pkg-price">
-                  <span>From / Person</span>
+                  <span data-i18n="pkg.priceLabel">From / Person</span>
                   <strong>€2.590</strong>
                 </div>
                 <a href="#quote-form" class="pkg-cta"
-                  >Plan Our Safari <i class="fas fa-arrow-right"></i
+                  ><span data-i18n="pkg6.cta">Plan Our Safari</span> <i class="fas fa-arrow-right"></i
                 ></a>
               </div>
             </div>
@@ -1113,7 +977,7 @@
         </h3> -->
 
         <!-- <h3 class="destination-section-title">Kenya Safari Destinations</h3> -->
-        <h3 class="destination-eyebrow">Kenya Safari Destinations</h3>
+        <h3 class="destination-eyebrow" data-i18n="dest.kenya.h">Kenya Safari Destinations</h3>
 
         <!-- <p class="section-lead" style="text-align: center; margin: 0 auto 2.5rem;">
           Experience the classic African safari — from the wildlife-rich
@@ -1192,7 +1056,7 @@
             </div>
           </article>
         </div>
-        <h3 class="destination-eyebrow" style="margin-top: 3rem">
+        <h3 class="destination-eyebrow" style="margin-top: 3rem" data-i18n="dest.tanzania.h">
           Tanzania Safari Destinations
         </h3>
         <div class="dest-grid" style="margin-top: 2rem">
@@ -1278,6 +1142,7 @@
         </div> -->
       </div>
     </section>
+
 
     <!-- ============================= -->
     <!-- Itinerary Section -->
@@ -1634,14 +1499,15 @@
       </div>
     </section>
 
+
     <!-- Guest Safari Moments Gallery -->
     <!-- ============================= -->
     <section class="section" id="gallery">
       <div class="container">
         <div class="text-center">
-          <div class="eyebrow">Guest Safari Moments</div>
-          <h2 class="section-title"> <span class="highlight">Real Journeys. Real Safari</span> Memories.</h2>
-          <p class="section-lead">
+          <div class="eyebrow" data-i18n="gallery.eyebrow">Guest Safari Moments</div>
+          <h2 class="section-title" data-i18n-html="gallery.title"> <span class="highlight">Real Journeys. Real Safari</span> Memories.</h2>
+          <p class="section-lead" data-i18n="gallery.lead">
             <!-- A look at the moments our guests have shared with us in the Masai
             Mara, Serengeti and Ngorongoro &mdash; their vehicles, their guides,
             their families, unfiltered. -->
@@ -1693,30 +1559,30 @@
         </div> -->
 
         <div class="gallery-grid">
-          <a href="assets/images/gallery1.png" class="gallery-item">
+          <a href="assets/images/gallery10.png" class="gallery-item">
             <img
-              src="assets/images/gallery1.png"
+              src="assets/images/gallery10.png"
               alt="Couple on safari, Masai Mara"
               loading="lazy"
             />
           </a>
-          <a href="assets/images/gallery2.png" class="gallery-item">
+          <a href="assets/images/gallery13.png" class="gallery-item">
             <img
-              src="assets/images/gallery2.png"
+              src="assets/images/gallery13.png"
               alt="4x4 Land Cruiser, Kenya safari"
               loading="lazy"
             />
           </a>
-          <a href="assets/images/gallery3.png" class="gallery-item">
+          <a href="assets/images/gallery5.png" class="gallery-item">
             <img
-              src="assets/images/gallery3.png"
+              src="assets/images/gallery5.png"
               alt="Lion sighting, Serengeti"
               loading="lazy"
             />
           </a>
-          <a href="assets/images/gallery4.png" class="gallery-item">
+          <a href="assets/images/gallery10.png" class="gallery-item">
             <img
-              src="assets/images/gallery4.png"
+              src="assets/images/gallery10.png"
               alt="Family on game drive"
               loading="lazy"
             />
@@ -1728,23 +1594,23 @@
               loading="lazy"
             />
           </a>
-          <a href="assets/images/gallery6.png" class="gallery-item">
+          <a href="assets/images/gallery13.png" class="gallery-item">
             <img
-              src="assets/images/gallery6.png"
+              src="assets/images/gallery13.png"
               alt="Elephants at watering hole, Amboseli"
               loading="lazy"
             />
           </a>
-          <a href="assets/images/gallery7.png" class="gallery-item">
+          <a href="assets/images/gallery5.png" class="gallery-item">
             <img
-              src="assets/images/gallery7.png"
+              src="assets/images/gallery5.png"
               alt="Local guide with travellers, Kenya"
               loading="lazy"
             />
           </a>
-          <a href="assets/images/gallery8.png" class="gallery-item">
+          <a href="assets/images/gallery5.png" class="gallery-item">
             <img
-              src="assets/images/gallery8.png"
+              src="assets/images/gallery5.png"
               alt="Hot air balloon safari, Great Migration"
               loading="lazy"
             />
@@ -1763,16 +1629,16 @@
               loading="lazy"
             />
           </a>
-          <a href="assets/images/gallery11.png" class="gallery-item is-hidden">
+          <a href="assets/images/gallery10.png" class="gallery-item is-hidden">
             <img
-              src="assets/images/gallery11.png"
+              src="assets/images/gallery10.png"
               alt="Giraffe sighting on the plains"
               loading="lazy"
             />
           </a>
-          <a href="assets/images/gallery12.png" class="gallery-item is-hidden">
+          <a href="assets/images/gallery13.png" class="gallery-item is-hidden">
             <img
-              src="assets/images/gallery12.png"
+              src="assets/images/gallery13.png"
               alt="Group celebration at camp"
               loading="lazy"
             />
@@ -1780,11 +1646,12 @@
         </div>
         <div class="gallery-more">
           <a href="#" id="gallery-more-btn" class="btn btn-outline"
-            >View More Photos</a
+            ><span data-i18n="gallery.more">View More Photos</span></a
           >
         </div>
       </div>
     </section>
+
 
     <!-- Gallery Lightbox -->
     <div class="lightbox" id="gallery-lightbox" aria-hidden="true">
@@ -1818,6 +1685,7 @@
       <div class="lightbox-counter" id="lightbox-counter">1 / 9</div>
     </div>
 
+
     <!-- ============================= -->
     <!-- Testimonials Section -->
     <!-- ============================= -->
@@ -1825,7 +1693,7 @@
       <div class="container">
         <div class="text-center">
           <div class="eyebrow" data-i18n="testi.eyebrow">Traveller Reviews</div>
-          <h2 class="section-title" data-i18n="testi.title">
+          <h2 class="section-title" data-i18n-html="testi.title">
             What <em>Spanish</em> Travellers Say About Reteti
           </h2>
           <p class="section-lead" data-i18n="testi.lead">
@@ -2003,6 +1871,7 @@
       </div>
     </section>
 
+
     <!-- ============================= -->
     <!-- FAQ Section -->
     <!-- ============================= -->
@@ -2168,6 +2037,7 @@
       </div>
     </section>
 
+
     <!-- ============================= -->
     <!-- Contact Form Section -->
     <!-- ============================= -->
@@ -2329,9 +2199,9 @@
                   <option value="" data-i18n="fo.dest">
                     Choose destination...
                   </option>
-                  <option value="Kenya">Kenya</option>
-                  <option value="Tanzania">Tanzania</option>
-                  <option value="Kenya &amp; Tanzania">
+                  <option value="Kenya" data-i18n="dest.opt.kenya">Kenya</option>
+                  <option value="Tanzania" data-i18n="dest.opt.tanzania">Tanzania</option>
+                  <option value="Kenya &amp; Tanzania" data-i18n="dest.opt.both">
                     Kenya &amp; Tanzania
                   </option>
                 </select>
@@ -2340,16 +2210,16 @@
                 <label for="f-month" data-i18n="f.month">Travel Date</label>
                 <select id="f-month" name="travel-month">
                   <option value="" data-i18n="fo.month">Not decided yet</option>
-                  <option value="September">September</option>
-                  <option value="October">October</option>
-                  <option value="November">November</option>
-                  <option value="December">December</option>
-                  <option value="January 2027">January 2027</option>
-                  <option value="February 2027">February 2027</option>
-                  <option value="March 2027">March 2027</option>
-                  <option value="April 2027">April 2027</option>
-                  <option value="May 2027">May 2027</option>
-                  <option value="June 2027">June 2027</option>
+                  <option value="September" data-i18n="month.sep">September</option>
+                  <option value="October" data-i18n="month.oct">October</option>
+                  <option value="November" data-i18n="month.nov">November</option>
+                  <option value="December" data-i18n="month.dec">December</option>
+                  <option value="January 2027" data-i18n="month.jan27">January 2027</option>
+                  <option value="February 2027" data-i18n="month.feb27">February 2027</option>
+                  <option value="March 2027" data-i18n="month.mar27">March 2027</option>
+                  <option value="April 2027" data-i18n="month.apr27">April 2027</option>
+                  <option value="May 2027" data-i18n="month.may27">May 2027</option>
+                  <option value="June 2027" data-i18n="month.jun27">June 2027</option>
                 </select>
               </div>
               <!-- No. of Travellers — full width -->
@@ -2442,32 +2312,35 @@
       </div>
     </section>
 
+
     <!-- ============================= -->
     <!-- Final CTA Section -->
     <!-- ============================= -->
     <section class="final-cta">
       <div class="container">
-        <span class="eyebrow" style="color: var(--gold-lt)"
+        <span class="eyebrow" style="color: var(--gold-lt)" data-i18n="cta2.eyebrow"
           >YOUR AFRICAN ADVENTURE STARTS HERE</span
         >
-        <h2 class="final-cta-title">
+        <h2 class="final-cta-title" data-i18n="cta2.title">
           Ready to Experience Kenya &amp; Tanzania?
         </h2>
-        <p class="final-cta-desc">
+        <p class="final-cta-desc" data-i18n="cta2.desc1">
           Tell us when you want to travel, who you're travelling with and what
           you want to experience.
         </p>
-        <p class="final-cta-desc">
+        <p class="final-cta-desc" data-i18n="cta2.desc2">
           We'll create a personalized safari around you.
         </p>
         <a href="#quote-form" class="btn btn-gold final-cta-btn"
-          >Get My Free Safari Plan <i class="fas fa-arrow-right"></i
+          ><span data-i18n="cta2.btn">Get My Free Safari Plan</span> <i class="fas fa-arrow-right"></i
         ></a>
-        <p class="final-cta-note">
+        <p class="final-cta-note" data-i18n="cta2.note">
           No obligation · Personalised itinerary · Clear pricing
         </p>
       </div>
     </section>
+
+
 
     <!-- ============================= -->
     <!-- Footer -->
@@ -2584,6 +2457,7 @@
                 href="https://www.retetisafaris.com"
                 target="_blank"
                 rel="noopener"
+                data-i18n="footer.d1"
                 >Masai Mara, Kenya</a
               >
             </li>
@@ -2592,6 +2466,7 @@
                 href="https://www.retetisafaris.com"
                 target="_blank"
                 rel="noopener"
+                data-i18n="footer.d2"
                 >Serengeti, Tanzania</a
               >
             </li>
@@ -2600,6 +2475,7 @@
                 href="https://www.retetisafaris.com"
                 target="_blank"
                 rel="noopener"
+                data-i18n="footer.d3"
                 >Ngorongoro, Tanzania</a
               >
             </li>
@@ -2608,6 +2484,7 @@
                 href="https://www.retetisafaris.com"
                 target="_blank"
                 rel="noopener"
+                data-i18n="footer.d4"
                 >Amboseli, Kenya</a
               >
             </li>
@@ -2616,6 +2493,7 @@
                 href="https://www.retetisafaris.com"
                 target="_blank"
                 rel="noopener"
+                data-i18n="footer.d5"
                 >Lake Nakuru, Kenya</a
               >
             </li>
@@ -2668,11 +2546,12 @@
           © 2026 Reteti Adventure Safaris. All rights reserved.
         </p>
         <div class="footer-credit">
-          Designed &amp; Developed by
+          <span data-i18n="footer.credit">Designed &amp; Developed by</span>
           <a href="#" target="_blank" rel="noopener">Duency</a>
         </div>
       </div>
     </footer>
+
 
     <!-- ============================= -->
     <!-- Floating Buttons -->
@@ -2694,6 +2573,8 @@
     <button class="back-top" id="back-top" aria-label="Back to top">
       <i class="fas fa-chevron-up"></i>
     </button>
+
+    
 
     <!-- Main JavaScript -->
     <script src="assets/js/main.js"></script>
